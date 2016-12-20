@@ -20,11 +20,9 @@ describe('Fake External System', function(){
       system.stop.should.be.a.Function
     })
 
-    it('Should return Promises from start() and stop() methods', function(){
+    it('Should return Promises from start()', function(){
       var system = systemFactory({})
       var promise = system.start()
-      promise.should.be.a.Promise
-      promise = system.stop()
       promise.should.be.a.Promise
     })
 
